@@ -10,6 +10,7 @@ const Collection = require('..').Collection;
  * @returns {HTML}   an HTML wrapper
  */
 module.exports = function(data,termField, valueField,options={}){
+	console.log("******HELLO*******" + data);
 	options.title = {text:options.title || "Word Cloud"};
 	let chartData = data
 	.map((row)=>({name:row[termField],weight:row[valueField]}));
